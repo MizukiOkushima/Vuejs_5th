@@ -20,5 +20,6 @@ function onReset(value) {
     <button @click="count++">+1</button>
     <!-- <ResetButton @reset="count = 0"/> -->
     <!-- <ResetButton @reset="count = $event" /> -->
-    <ResetButton @reset="onReset" />
+    <!-- <ResetButton @resetCount="onReset" /> -->
+    <ResetButton @reset-count="onReset" />
 </template>
