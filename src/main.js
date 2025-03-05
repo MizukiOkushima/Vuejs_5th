@@ -6,8 +6,9 @@ import { createApp } from 'vue'
 // import BaseIcon from './components/BaseIcon.vue'
 // import './assets/main.css'
 // import App from './App5.vue'
-import './assets/section7.css'
-import App from './section7.vue'
+// import './assets/section7.css'
+// import App from './section7.vue'
+import App from './section8.vue'
 
 // console.log(App)
 const app = createApp(App)
