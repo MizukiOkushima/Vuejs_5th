@@ -2,13 +2,14 @@ import { createApp } from 'vue'
 // import App from './App.vue'
 // import App from './App2.vue'
 // import App from './App3.vue'
-import App from './App4.vue'
-import BaseIcon from './components/BaseIcon.vue'
-import './assets/main.css'
+// import App from './App4.vue'
+// import BaseIcon from './components/BaseIcon.vue'
+// import './assets/main.css'
+import App from './App5.vue'
 
-console.log(App)
+// console.log(App)
 const app = createApp(App)
-app.component('BaseIcon', BaseIcon)
+// app.component('BaseIcon', BaseIcon)
 // .component('BaseIcon', BaseIcon)
 // .component('BaseIcon', BaseIcon)
 // .component('BaseIcon', BaseIcon)
