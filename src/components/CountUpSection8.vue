@@ -7,35 +7,55 @@ import {
     onUpdated,
     onBeforeUnmount,
     onUnmounted,
+    nextTick,
 } from 'vue';
 const count = ref(0)
 console.log('script setup')
 onBeforeMount(() => {
     console.log('onBeforeMount')
-    debugger
+    // debugger
 })
 onMounted(() => {
     console.log('onMounted')
-    debugger
+    // debugger
 })
 onBeforeUpdate(() => {
     console.log('onBeforeUpdate')
-    debugger
+    // debugger
 })
 onUpdated(() => {
     console.log('onUpdated')
-    debugger
+    // debugger
 })
 onBeforeUnmount(() => {
     console.log('onBeforeUnmount')
-    debugger
+    // debugger
 })
 onUnmounted(() => {
     console.log('onUnmounted')
-    debugger
+    // debugger
 })
+// function countUp() {
+//     count.value++
+//     count.value++
+//     count.value++
+//     nextTick(() => {
+//         console.log('nextTick')
+//         debugger
+//     })
+//     // debugger
+// }
+async function countUp() {
+    count.value++
+    count.value++
+    count.value++
+    await nextTick()
+    console.log('nextTick')
+    debugger
+}
 </script>
 <template>
     <p>count: {{ count }}</p>
-    <button @click="count++">+1</button>
+    <!-- <button @click="count++">+1</button> -->
+    <button @click="countUp">+1</button>
 </template>

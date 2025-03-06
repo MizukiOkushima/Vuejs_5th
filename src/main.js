@@ -8,7 +8,10 @@ import { createApp } from 'vue'
 // import App from './App5.vue'
 // import './assets/section7.css'
 // import App from './section7.vue'
-import App from './section8.vue'
+// import App from './section8.vue'
+// import App from './section8Second.vue'
+// import App from './section9First.vue'
+import App from './section9Second.vue'
 
 // console.log(App)
 const app = createApp(App)
