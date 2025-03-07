@@ -10,6 +10,7 @@ console.log(currentComp.value)
 //     count: 0,
 // })
 // const tmpObj = shallowRef({})
+const isShow = ref(false)
 </script>
 <template>
     <h1>Dynamic Components</h1>
@@ -32,7 +33,21 @@ console.log(currentComp.value)
     <!-- <CompB v-show="currentComp === CompB" /> -->
     <!-- <p>{{ tmpObj }}</p>
     <button @click="tmpObj = {}">+1</button> -->
-    <Teleport to="body">
-        <h2>Teleport</h2>
+    <!-- <Teleport to="#app"> -->
+    <!-- <Teleport to=".app"> -->
+    <button @click="isShow = true">Open Modal</button>
+    <Teleport to="body" :disabled="true">
+        <!-- <Teleport to="body" :disabled="false"> -->
+        <!-- <Teleport to="body"> -->
+        <!-- <h2>Teleport</h2>
+        <p>{{ currentComp === CompA }}</p> -->
+        <dialog v-if="isShow" open>
+            <p>This is a Modal!</p>
+            <button @click="isShow = false">Close</button>
+        </dialog>
     </Teleport>
+    <!-- <Teleport to="body" defer><p>A</p></Teleport> -->
+    <!-- <Teleport to="#compB" defer><p>A</p></Teleport> -->
+    <Teleport to="#compA" defer><p>A</p></Teleport>
+    <Teleport to="body"><p>B</p></Teleport>
 </template>

@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted, onActivated, onDeactivated } from 'vue';
+import CompBChild from './CompBChild.vue'
 
 onMounted(() => {
     console.log('CompB onMounted')
@@ -16,7 +17,8 @@ onDeactivated(() => {
 const count = ref(0)
 </script>
 <template>
-    <h2>CompB</h2>
+    <h2 id="compB">CompB</h2>
     <p>{{ count }}</p>
     <button @click="count++">+1</button>
+    <CompBChild />
 </template>

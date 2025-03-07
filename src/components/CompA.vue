@@ -1,3 +1,3 @@
 <template>
-    <h2>CompA</h2>
+    <h2 id="compA">CompA</h2>
 </template>
